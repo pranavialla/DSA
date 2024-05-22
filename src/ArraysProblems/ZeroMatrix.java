@@ -1,12 +1,9 @@
-package Arrays;
+package ArraysProblems;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class ZeroMatrix {
@@ -46,6 +43,67 @@ public class ZeroMatrix {
         }
 
         // setting  row 0
+
+        /*    int n= matrix.length ;
+            int m=matrix[0].length ;
+            int zeroIndexRow=1;
+            int zeroIndexColumn=1;
+
+            for(int i=0; i<m; i++){
+                if(matrix[0][i]==0){
+                    zeroIndexRow=0;
+                    break;
+                }
+            }
+
+            for(int j=0; j<n; j++){
+                if(matrix[j][0]==0){
+                    zeroIndexColumn=0;
+                    break;
+                }
+            }
+
+            if( zeroIndexRow==0  || zeroIndexColumn==0){
+                matrix[0][0]=0;
+            }
+
+            // setting  col 0
+            for(int rowIndex=1; rowIndex<n; rowIndex++){
+                for(int columnIndex=1; columnIndex<m; columnIndex++){
+                    if (matrix[rowIndex][columnIndex]==0) {
+                        matrix[0][columnIndex]=0;
+                        matrix[rowIndex][0]=0;
+                    }
+                }
+            }
+
+            for(int rowIndex=1; rowIndex<n; rowIndex++){
+                for(int columnIndex=1; columnIndex<m; columnIndex++){
+                    if (matrix[0][columnIndex]==0 ||matrix[rowIndex][0]==0) {
+                        matrix[rowIndex][columnIndex]=0;
+                    }
+                }
+            }
+
+            if(zeroIndexRow==0){
+                for (int col=1; col<m; col++){
+                    matrix[0][col]=0;
+                }
+            }
+
+
+            if(zeroIndexColumn==0){
+                for (int row=1; row<n; row++){
+                    matrix[row][0]=0;
+                }
+            }*/
+
+
+
+            // setting  row 0
+
+
+
 
 
         return matrix;
