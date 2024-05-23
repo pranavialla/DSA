@@ -23,9 +23,13 @@ public class Main {
 
         BuyAndSellStockOnce buyAndSellStockOnce=new BuyAndSellStockOnce(new int[]{7,1,5,3,6,4});
 
-        MergeIntergvals mergeIntergvals=new MergeIntergvals(new int[][]{{1,3},{2,6},{8,10},{15,18}});*/
+        MergeIntergvals mergeIntergvals=new MergeIntergvals(new int[][]{{1,3},{2,6},{8,10},{15,18}});
 
-        FindTheDuplicate findTheDuplicate=new FindTheDuplicate(new int[]{1,3,4,2,2});
+        FindTheDuplicate findTheDuplicate=new FindTheDuplicate(new int[]{1,3,4,2,2});*/
+
+        SerachATwoDMatrix serachATwoDMatrix = new SerachATwoDMatrix(new int[][]{{1,2,3,4,5}, {6,7,8,9,10}}, 8);
+
+
 
 
 
