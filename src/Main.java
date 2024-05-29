@@ -25,9 +25,25 @@ public class Main {
 
         MergeIntergvals mergeIntergvals=new MergeIntergvals(new int[][]{{1,3},{2,6},{8,10},{15,18}});
 
-        FindTheDuplicate findTheDuplicate=new FindTheDuplicate(new int[]{1,3,4,2,2});*/
+        FindTheDuplicate findTheDuplicate=new FindTheDuplicate(new int[]{1,3,4,2,2});
 
         SerachATwoDMatrix serachATwoDMatrix = new SerachATwoDMatrix(new int[][]{{1,2,3,4,5}, {6,7,8,9,10}}, 8);
+
+        PowerXtoN powerXtoN=new PowerXtoN(2.00000, -2147483648);
+         UniquePaths u= new UniquePaths(3,7);
+
+        LongestSubsequence longestSubsequence=new LongestSubsequence();
+        int[] arr= {100,4,200,1,3,2};
+        int i = longestSubsequence.calculateLongestSubsequence(arr);
+
+        LargestSubsequenceWithZeroSum l= new LargestSubsequenceWithZeroSum();
+        int[] arr={15,-2,2,-8,1,7,10,23};
+        l.getLargestSubsequenceWithZeroSum(arr , 8);*/
+
+        LongestSubStringWithOutRepetation longestSubStringWithOutRepetation=new LongestSubStringWithOutRepetation();
+        longestSubStringWithOutRepetation.getLongestSubStringWithOutRepetation("abcabcbb");
+
+
 
 
 
