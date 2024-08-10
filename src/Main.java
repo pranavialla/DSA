@@ -1,12 +1,8 @@
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
-import BinarySearch.MediumInRowWiseSortedMatrix;
-import BinarySearch.NthRootOfM;
-import GreedyAlgo.MinimumPlatforms;
-import Recurssion.*;
+import DynamicProgramming.LongestCommonSubsequenceIn2Strings;
+import DynamicProgramming.PrintLonngestCommonSubsequence;
 
 public class Main {
 
@@ -146,11 +142,38 @@ public class Main {
         dictionary.add("here");
        System.out.println(wordBreak.wordBreak("godisnowherenowhere",  dictionary));
         NthRootOfM nthRootOfM = new NthRootOfM();
-        nthRootOfM.getNthRootOfM(4, 1);*/
+        nthRootOfM.getNthRootOfM(4, 1);
         MediumInRowWiseSortedMatrix mediumInRowWiseSortedMatrix = new MediumInRowWiseSortedMatrix();
         int[][]  matrix =  {{1, 3, 5},{2, 6, 9},{3, 6, 9}};
 ;       mediumInRowWiseSortedMatrix.mediumInRowWiseSortedMatrix(matrix, 3, 3);
 
+        LongestIncreasingSubsequence lis= new LongestIncreasingSubsequence();
+        System.out.println(lis.getLongestIncreasingSubsequence(new int[]{10,9,2,5,3,7,101,18}));
+        int[] money = new int[] {2, 3, 2};
+        System.out.println(HouseRoberry.houseRobber(money));
+        int[][] points = new int[][]{{1,2, 5},{3, 1, 1,},{3, 3, 3}};
+        System.out.println(NinjaTraining.ninja(3, points));
+        MaximumSumPathGame maximumSumPathGame = new MaximumSumPathGame();
+        maximumSumPathGame.get();
+        MaximumPathSum maximumPathSum = new MaximumPathSum();
+        int[][] matrix = new int[][]{{1, 2, 10, 4}
+                                    ,{100, 3, 2, 1},
+                                     {1, 1, 20, 2},
+                                     {1, 2, 2, 1}};
+        //int[][] matrix = new int[][]{{-10000}};
+        //matrix= new int[][]{{10, 2, 3}, {3, 7, 2},  {8, 1, 5}};
+        System.out.println(maximumPathSum.getMaxPathSum(matrix));
+        int[] weight = new int[]{1,2, 4, 5};
+        int[] value = new int[]{5, 4, 8, 6};
+        int maxWeight = 5;
+        System.out.println(Knapsack01.getMaxValue(weight, value, 4, maxWeight));
+
+        int[] prices = new int[]{2, 5, 7, 8, 10};
+        int n = prices.length;
+        System.out.println( RodCutting.cutRod(prices, n));*/
+
+        System.out.println(LongestCommonSubsequenceIn2Strings.get("adebc", "dcadb"));
+        PrintLonngestCommonSubsequence.goAhead("adebc", "dcadb");
     }
 
 }
