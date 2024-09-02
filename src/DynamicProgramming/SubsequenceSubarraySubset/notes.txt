@@ -1,0 +1,20 @@
+subarray: some continuous elements in the array .
+    For example, lets take an array int arr=[10,20,30,40,50];
+
+    -->Now lets see its various combinations:
+
+      subarr=[10,20] //true
+      subarr=[10,30] //false, because its not in contiguous form
+      subarr=[40,50] //true
+
+subset: some elements in the collection
+    For example, lets take an array int arr=[10,20,30,40,50];
+
+    -->Now lets see its various combinations:
+
+      subseq=[10,20]; //true
+      subseq=[10,30]; //true
+      subseq=[30,20]; //false, because order isn't maintained
+
+subsequence: in most case, some elements in the array maintaining relative order (not necessary to be continuous)
+    
