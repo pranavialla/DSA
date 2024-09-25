@@ -1,8 +1,7 @@
 import java.io.*;
 import java.util.Scanner;
 
-import DynamicProgramming.LongestCommonSubsequenceIn2Strings;
-import DynamicProgramming.PrintLonngestCommonSubsequence;
+import Graph.TopologicalSort.AllienDictionary;
 
 public class Main {
 
@@ -170,10 +169,21 @@ public class Main {
 
         int[] prices = new int[]{2, 5, 7, 8, 10};
         int n = prices.length;
-        System.out.println( RodCutting.cutRod(prices, n));*/
+        System.out.println( RodCutting.cutRod(prices, n));
 
         System.out.println(LongestCommonSubsequenceIn2Strings.get("adebc", "dcadb"));
         PrintLonngestCommonSubsequence.goAhead("adebc", "dcadb");
+
+        LongestIncreasingSubsequence longestIncreasingSubsequence =  new LongestIncreasingSubsequence();
+        int[] nums = new int[]{10,9,2,5,3,7,101,18};
+        longestIncreasingSubsequence.lengthOfLIS(nums);
+
+
+        SumTwoLargeNumbers s = new SumTwoLargeNumbers("1.5", "0.56");*/
+
+        AllienDictionary allienDictionary = new AllienDictionary();
+        String[] words = {"baa", "abcd", "abca", "cab", "cada"};
+        System.out.println(allienDictionary.findOrder(words, 5, 4));
     }
 
 }

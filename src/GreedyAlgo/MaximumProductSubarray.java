@@ -39,7 +39,6 @@ public class MaximumProductSubarray {
         for(int i = 0; i < nums.length; i++) {
             if(prefixProduct==0){
                 prefixProduct = 1;
-
                 prefixStartIndex = i;
 
             }

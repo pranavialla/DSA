@@ -7,15 +7,14 @@ import BinaryTree.BinaryTree.Node;
 
 
 public class TreeTraversal {
-    public void inOrderTraverssal(Node root){
+    public void inOrderRecurTraverssal(Node root){
         if( root!=null ){
             return;
         }
 
-        inOrderTraverssal(root.left);
+        inOrderRecurTraverssal(root.left);
         System.out.println(root.data);
-        inOrderTraverssal(root.right);
-
+        inOrderRecurTraverssal(root.right);
     }
 
     public List<Integer> inorderTraversal(Node root) {
@@ -35,6 +34,56 @@ public class TreeTraversal {
         }
 
         return list;
+    }
+
+
+
+    public void postOrderRecurTraverssal(Node root){
+        if( root!=null ){
+            return;
+        }
+
+        postOrderRecurTraverssal(root.left);
+        postOrderRecurTraverssal(root.right);
+        System.out.println(root.data);
+
+    }
+
+    public List postorderTraversal(Node root) {
+        Stack stack = new Stack();
+        List list = new ArrayList();
+        Node pre = null;
+        Node current = root;
+        while(current != null || !stack.isEmpty()) {
+            while(current != null) {
+                stack.push(current);
+                current = current.left;
+            }
+            current = (Node) stack.pop();
+            if(current.right != null && pre != current.right) {
+                stack.push(current);
+                current = current.right;
+                continue;
+            }
+            list.add(current.data);
+            pre = current;
+            current = null;
+
+        }
+        return list;
+    }
+
+
+
+
+    public void preOrderRecurTraverssal(Node root){
+        if( root!=null ){
+            return;
+        }
+
+        System.out.println(root.data);
+        preOrderRecurTraverssal(root.left);
+        preOrderRecurTraverssal(root.right);
     }
 
     public static List < Integer > getPreOrderTraversal(Node root) {

@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming.LIS;
 
 import java.rmi.MarshalledObject;
 import java.util.ArrayList;

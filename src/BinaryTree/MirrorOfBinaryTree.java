@@ -6,18 +6,20 @@ import java.util.Queue;
 
 
 public class MirrorOfBinaryTree {
-    void iterativemirror(Node node) {
+    Node iterativemirror(Node node) {
+        if(node!=null){
         Queue<Node> q=new LinkedList<>();
         q.add(node);
         while(q.size()!=0){
-            Node a=q.remove();
+            Node a=q.poll();
             Node temp;
-            if(a.left!=null)q.add(a.left);
-            if(a.right!=null)q.add(a.right);
+            if(a.left!=null)q.offer(a.left);
+            if(a.right!=null)q.offer(a.right);
             temp=a.left;
             a.left=a.right;
             a.right=temp;
 
-        }
+        }}
+        return node;
     }
 }

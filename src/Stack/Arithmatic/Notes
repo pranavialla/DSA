@@ -1,0 +1,47 @@
+Arithmatic operator Based on their priority
+^
+*, /
++, -
+
+operands
+A-Z
+a-z
+
+
+infix
+    Expressions we write
+    (A+B)*(C+D)
+    operators in between operands
+
+postfix
+    operators are post operands
+
+prefix
+    operators are before operands
+
+
+
+
+infix to postfix conversion
+    iterate over all elements
+        1. we need to traverse through all char in the infix
+        2. if we come accross operand we add it to the ans
+        3. if we come accross "(" we push irrespective of the top element in the stack
+        3. if we come accross ")" we pop and add it to ans till we come across "(" in stack
+        4. if we come accross operator " ^, +, -, *, /," we add it to the stack based on some rules
+            1. we can only push to stack if the priority of the top element is less than priority of the element we're pushing
+            2. if the priority of top element is less than the priority of the element we're pushing then we will pop it till we come
+               accross element that's priority is less than priority of element we're pushing
+
+    pop all elements in stack and add it to the ans
+
+
+infix to prefix conversion
+    1. reverse the expression and while reversing add "(" in place of ")" and add ")" in place of "("
+    2. do similar to infix to prefix conversion but add operator in the stack even if the priority of the top element is equal to current operators except "^"
+    3. reverse the expression answer
+
+
+
+
+

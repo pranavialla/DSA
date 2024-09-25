@@ -17,4 +17,10 @@ subset: some elements in the collection
       subseq=[30,20]; //false, because order isn't maintained
 
 subsequence: in most case, some elements in the array maintaining relative order (not necessary to be continuous)
-    
+    For example, lets take an array int arr=[10,20,30,40,50];
+
+    -->Now lets see its various combinations:
+
+      subset={10,20}; //true
+      subset={10,30}; //true
+      subset={30,20}; //true

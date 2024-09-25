@@ -1,2 +1,4 @@
-package String;public class SubDomainVisit {
+package String;
+//https://leetcode.com/problems/subdomain-visit-count/description/
+public class SubDomainVisit {
 }

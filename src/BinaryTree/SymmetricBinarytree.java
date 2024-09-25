@@ -27,6 +27,13 @@ public class SymmetricBinarytree {
 
         }
         return true;
+    }
 
+    public boolean isSymmetric(Node left, Node right){
+        if(left==null || right==null) return left==right;
+        if(left.data==right.data){
+            return isSymmetric(left.left, right.right) && isSymmetric(left.right, right.left);
+        }
+        return false;
     }
 }

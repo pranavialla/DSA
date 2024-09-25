@@ -1,5 +1,7 @@
-package ArraysProblems;
+package DynamicProgramming.Stocks;
 
+
+//https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 public class BuyAndSellStockOnce {
     public BuyAndSellStockOnce(int[] prices){
         int maxProfit=0;
@@ -14,5 +16,19 @@ public class BuyAndSellStockOnce {
         }
 
         System.out.println("max profit : "+ maxProfit);
+    }
+
+    public int buyAndSellStock(int[] prices){
+        int minPriceSoFar  = prices[0];
+        int profit =0;
+
+        for (int i=0; i<prices.length; i++){
+            int profiIfSoldToday = prices[i]-minPriceSoFar;
+            profit = Math.max(profit, profiIfSoldToday);
+            minPriceSoFar = Math.min( prices[i], minPriceSoFar);
+
+        }
+
+        return profit;
     }
 }

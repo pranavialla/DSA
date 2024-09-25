@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
+
+//https://leetcode.com/problems/set-matrix-zeroes/
 public class ZeroMatrix {
     Scanner sc;
     Writer outputWriter;

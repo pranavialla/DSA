@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming.Partitions;
 
 public class RodCutting {
     public static int cutRod(int price[], int n) {

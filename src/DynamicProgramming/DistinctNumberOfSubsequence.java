@@ -1,5 +1,7 @@
 package DynamicProgramming;
 
+import java.util.Arrays;
+
 public class DistinctNumberOfSubsequence {
     public static int distinctSubsequences(String s, String t) {
         int[] dp = new int[s.length()+1];

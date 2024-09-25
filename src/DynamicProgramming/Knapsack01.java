@@ -9,7 +9,7 @@ public class Knapsack01 {
         }
 
         for(int i=0; i<maxWeight+1; i++){
-            if(i - weight[0] >=0){
+            if(i - weight[0] >= 0){
                 dp[0][i] = value[0];
             }
         }

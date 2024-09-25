@@ -1,16 +1,16 @@
-package DynamicProgramming;
+package DynamicProgramming.StringsLCS;
 
-public class ShortestCommonSuperSequence {
+public class PrintLonngestCommonSubsequence {
     public static  void goAhead( String text1, String text2){
         int[][] dp = initialising(text1, text2);
         dp = getLCSMatrix(text1, text2, dp);
-        String LCS = getSCSString(text1, text2, dp);
+        String LCS = getLCSString(text1, text2, dp);
         System.out.println(LCS);
 
 
     }
 
-    private static String getSCSString(String text1, String text2, int[][] dp) {
+    private static String getLCSString(String text1, String text2, int[][] dp) {
         int i1 = text1.length();
         int i2 = text2.length();
         String LCS = "";
@@ -21,11 +21,9 @@ public class ShortestCommonSuperSequence {
                 i2--;
             }
             else if(dp[i1-1][i2]>dp[i1][i2-1]){
-                LCS = text1.charAt(i1-1) + LCS;
                 i1--;
             }
             else{
-                LCS = text1.charAt(i2-1) + LCS;
                 i2--;
             }
         }

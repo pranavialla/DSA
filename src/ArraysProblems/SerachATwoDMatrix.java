@@ -1,6 +1,8 @@
 package ArraysProblems;
 
 
+//https://leetcode.com/problems/search-a-2d-matrix/
+
 public class SerachATwoDMatrix {
     public SerachATwoDMatrix(int[][] matrix, int target) {
         int lenghth = matrix.length*matrix[0].length;
