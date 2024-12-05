@@ -6,8 +6,8 @@ class Validate{
 
     public boolean isBST(int lowerBound, int upperBound, TreeNode root){
         if(root!=null){
-            if(lowerBound<root.val && root.val<upperBound){
-                return  isBST(lowerBound, root.val, root.left) && isBST(root.val, upperBound, root.right) ;
+            if(lowerBound<root.value && root.value<upperBound){
+                return  isBST(lowerBound, root.value, root.left) && isBST(root.value, upperBound, root.right) ;
             }
             else return false;
         }
