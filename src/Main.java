@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.Scanner;
-
-import Graph.TopologicalSort.AllienDictionary;
+import Stack.ValidParanthesis;
+//import Graph.TopologicalSort.AllienDictionary;
 
 public class Main {
 
@@ -185,8 +185,11 @@ public class Main {
 //         String[] words = {"baa", "abcd", "abca", "cab", "cada"};
 //         System.out.println(allienDictionary.findOrder(words, 5, 4));
 
-        SortedArrayToBST s = new SortedArrayToBST();
-        s.getSortedArrayToBST(new int[]{ 1, 2, 3, 4, 5});
+        // SortedArrayToBST s = new SortedArrayToBST();
+        // s.getSortedArrayToBST(new int[]{ 1, 2, 3, 4, 5});
+
+        ValidParanthesis validParanthesis = new ValidParanthesis();
+        System.out.print(validParanthesis.isValid("()()"));
     }
 
 }
