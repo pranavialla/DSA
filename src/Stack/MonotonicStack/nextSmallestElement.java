@@ -1,4 +1,4 @@
-package Stack;
+package Stack.MonotonicStack;
 
 import java.util.Stack;
 
@@ -9,21 +9,21 @@ public class nextSmallestElement {
         stack.push(nums.length);
 
         for (int i = nums.length - 1; i >= 0; i--) {
-            if (nums[stack.peek()] > nums[i]) {
-                while (!(stack.peek() == nums.length) && nums[stack.peek()] > nums[i]) {
+            if (!stack.isEmpty() && nums[stack.peek()] >= nums[i]) {
+                while (!stack.isEmpty() && nums[stack.peek()] >= nums[i]) {
                     stack.pop();
                 }
-                if (stack.peek() == nums.length) {
-                    nextSmallestElementIndex[i] = nums.length;
-                    stack.push(i);
+                if (stack.isEmpty()) {
+                    nextSmallestElementIndex[i] = -1;
+                    
                 } else {
                     nextSmallestElementIndex[i] = stack.peek();
                 }
             }
             else {
                 nextSmallestElementIndex[i] = stack.peek();
-                stack.push(i);
             }
+            stack.push(i);
         }
 
         return nextSmallestElementIndex;

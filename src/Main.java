@@ -1,5 +1,7 @@
 import java.io.*;
 import java.util.Scanner;
+
+import BinarySearch.MatrixMedian;
 import Stack.ValidParanthesis;
 //import Graph.TopologicalSort.AllienDictionary;
 
@@ -188,8 +190,11 @@ public class Main {
         // SortedArrayToBST s = new SortedArrayToBST();
         // s.getSortedArrayToBST(new int[]{ 1, 2, 3, 4, 5});
 
-        ValidParanthesis validParanthesis = new ValidParanthesis();
-        System.out.print(validParanthesis.isValid("()()"));
+        // ValidParanthesis validParanthesis = new ValidParanthesis();
+        // System.out.print(validParanthesis.isValid("()()"));
+
+        MatrixMedian matrixMedian = new MatrixMedian();
+        System.out.println(matrixMedian.median());
     }
 
 }
