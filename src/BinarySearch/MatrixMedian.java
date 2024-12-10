@@ -22,7 +22,7 @@ public class MatrixMedian {
             int place = 0;
             int mid = min + (max-min)/ 2;
             for(int row=0; row<mat[0].length; row++){
-                place = place + numberLessThanEqualTodesirednNum(mat[row], mid);
+                place = place + numsLessThanMid(mat[row], mid);
             }
 
             if(place >=desired){
@@ -33,17 +33,17 @@ public class MatrixMedian {
             }
         }
    
-        return min;
+        return max;
                     
     }
             
-     int numberLessThanEqualTodesirednNum(int[] arr, int desired) {
-        
+     int numsLessThanMid(int[] arr, int val) {
+        if(val>=arr[arr.length-1]) return arr.length;
         int left = 0;
-        int right = arr.length;
+        int right = arr.length-1;
         while (left<right) {
             int mid= left+(right-left)/ 2 ;
-            if(arr[mid]<=desired){
+            if(arr[mid]<=val){
                 left = mid+1;
             }
             
@@ -53,6 +53,7 @@ public class MatrixMedian {
             
         }
         return left;
-    }}
+    }
+}
                 
                     
