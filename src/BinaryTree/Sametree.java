@@ -1,6 +1,6 @@
 package BinaryTree;
 
-import BinaryTree.BinaryTree.Node;
+import BinaryTree.TreeNode.Node;
 
 public class Sametree {
     public boolean isSameTree(Node root1, Node root2) {

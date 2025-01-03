@@ -1,7 +1,7 @@
 package BinaryTree;
 
 import java.util.*;
-import BinaryTree.BinaryTree.Node;
+import BinaryTree.TreeNode.Node;
 
 class Pair<N, I extends Number> {
 
@@ -41,6 +41,33 @@ class DiffView
         // Recursively call the function for the
         // right child with an increased level
         recursionLeft(root.right, level + 1, res);
+    }
+
+
+    ArrayList<Integer> leftView(Node root) {
+        // code here
+        ArrayList<Integer> leftveiw = new ArrayList<>();
+        Queue<Node> queue = new LinkedList<>();
+        
+        if(root!=null){
+            queue.add(root);
+        }
+        
+        while( !queue.isEmpty() ){
+            leftveiw.add(queue.peek().data);
+            int size = queue.size();
+            for( int i=0; i<size; i++ ){
+                Node node =  queue.poll();
+                if(node.left!=null){
+                    queue.add(node.left);
+                }
+                if(node.right!=null){
+                    queue.add(node.right);
+                }
+            }
+        }
+        
+        return leftveiw;
     }
 
     // Recursive function to traverse the

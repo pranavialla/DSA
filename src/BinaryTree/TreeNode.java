@@ -1,6 +1,6 @@
 package BinaryTree;
 
-public class BinaryTree {
+public class TreeNode {
     Node root;
     public static class Node{
         Node left;

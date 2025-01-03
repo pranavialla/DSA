@@ -1,7 +1,7 @@
 package BinaryTree;
 
 import javax.swing.tree.TreeNode;
-import BinaryTree.BinaryTree.Node;
+import BinaryTree.TreeNode.Node;
 
 import java.util.HashMap;
 import java.util.LinkedList;

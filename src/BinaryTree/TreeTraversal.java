@@ -3,7 +3,7 @@ package BinaryTree;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
-import BinaryTree.BinaryTree.Node;
+import BinaryTree.TreeNode.Node;
 
 
 public class TreeTraversal {

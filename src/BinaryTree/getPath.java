@@ -1,5 +1,5 @@
 package BinaryTree;
-import BinaryTree.BinaryTree.Node;
+import BinaryTree.TreeNode.Node;
 
 import java.util.List;
 
