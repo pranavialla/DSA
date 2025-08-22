@@ -7,7 +7,8 @@ subarray: some continuous elements in the array .
       subarr=[10,30] //false, because its not in contiguous form
       subarr=[40,50] //true
 
-subset: some elements in the collection
+subset: some elements in the collection.
+    A subset is any combination of elements selected from the original set, regardless of order.
     For example, lets take an array int arr=[10,20,30,40,50];
 
     -->Now lets see its various combinations:
@@ -19,8 +20,9 @@ subset: some elements in the collection
 subsequence: in most case, some elements in the array maintaining relative order (not necessary to be continuous)
     For example, lets take an array int arr=[10,20,30,40,50];
 
+    A subsequence is a sequence derived from the original sequence by deleting zero or more elements without changing the order of the remaining elements.
     -->Now lets see its various combinations:
 
       subset={10,20}; //true
       subset={10,30}; //true
-      subset={30,20}; //true
+      subset={30,20}; //false
