@@ -1,0 +1,40 @@
+Slow pointer Fast pointer
+--------------------------
+
+Let’s define the structure of the linked list or array as follows:
+
+L = number of steps from the head to the start of the cycle.
+
+C = length of the cycle.
+
+M = number of steps from the cycle start to the meeting point.
+
+T = total steps taken by the slow pointer until the meeting.
+
+Let:
+
+slow moves 1 step per iteration.
+
+fast moves 2 steps per iteration.
+
+
+
+
+
+proof that they meet if there is a cycle
+
+The meeting point is guaranteed because:
+
+1. The cycle is finite.
+
+2. The fast pointer gains 1 step on the slow pointer per iteration.
+
+3. After C iterations inside the cycle, the fast pointer will have gained C steps and thus must meet the slow pointer.
+
+
+After L iteration,
+
+Slow pointer is at - cycle starting point
+Fast pointer is at - C%L
+
+After C%L iterations fast pointer meet slow pointer at the same place where fast pointer was when slow pointer is at cycle start
