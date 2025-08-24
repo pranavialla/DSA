@@ -1,0 +1,2 @@
+1. Always have index condition before the logical condition in the conditional loop to avoid array index out of range
+2. Always Always Always start will normal approch and don't try to start with optimal approach and endup doing nothing
