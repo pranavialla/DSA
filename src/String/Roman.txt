@@ -1,0 +1,96 @@
+
+🏛️ Roman Numeral Basics
+
+Roman numerals use letters to represent values:
+
+Symbol	Value	
+I	1	
+V	5	
+X	10	
+L	50	
+C	100	
+D	500	
+M	1000	
+
+
+---
+
+🔁 How Roman Numerals Work
+
+start from the end digit
+
+• Additive Rule: If a smaller or equal numeral comes before  a larger one, you add them.• Example: `VI` = 5 + 1 = 6
+• Example: `XV` = 10 + 5 = 15
+
+• Subtractive Rule: If a smaller numeral comes before a larger one, you subtract it.• Example: `IV` = 5 − 1 = 4
+• Example: `IX` = 10 − 1 = 9
+
+• Roman numerals are usually written from largest to smallest, left to right, except when using the subtractive rule.
+
+
+---
+
+🔢 Converting Roman to Integer (Step-by-Step)
+
+Let’s say you want to convert `MCMXCIV` to an integer:
+
+1. Break it down: `M` `CM` `XC` `IV`
+2. Convert each part:• `M` = 1000
+• `CM` = 900 (100 before 1000)
+• `XC` = 90 (10 before 100)
+• `IV` = 4 (1 before 5)
+
+3. Add them up:
+1000 + 900 + 90 + 4 = 1994
+
+Great catch, Pranavi 👀—that specific set of values in the array for the Integer to Roman conversion isn’t arbitrary. It’s carefully chosen to reflect every valid Roman numeral building block, including both standard and subtractive forms.
+
+---
+
+🧱 Why These Specific Values?
+
+Roman numerals are constructed using a combination of base values and subtractive pairs. Here’s why each value is included:
+
+Value	Symbol	Reason	
+1000	M	Largest base unit	
+900	CM	Subtractive form of 1000 − 100	
+500	D	Base unit	
+400	CD	Subtractive form of 500 − 100	
+100	C	Base unit	
+90	XC	Subtractive form of 100 − 10	
+50	L	Base unit	
+40	XL	Subtractive form of 50 − 10	
+10	X	Base unit	
+9	IX	Subtractive form of 10 − 1	
+5	V	Base unit	
+4	IV	Subtractive form of 5 − 1	
+1	I	Smallest unit	
+
+
+---
+
+🧠 Why Not Just Use Base Values?
+
+If we only used base values like `M`, `D`, `C`, `L`, `X`, `V`, and `I`, we’d end up with invalid Roman numerals like:
+
+• `IIII` instead of `IV`
+• `VIIII` instead of `IX`
+• `LXXXX` instead of `XC`
+
+
+Roman numeral rules limit repetition (usually no more than three of the same symbol in a row) and require subtractive notation for certain numbers.
+
+---
+
+⚙️ Algorithmic Benefit
+
+Using this full set of values:
+
+• Ensures valid Roman formatting
+• Enables a greedy algorithm to work seamlessly
+• Avoids complex conditional logic or post-processing
+
+
+---
+
+
