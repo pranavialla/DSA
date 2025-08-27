@@ -1,2 +1,4 @@
 1. Always have index condition before the logical condition in the conditional loop to avoid array index out of range
 2. Always Always Always start will normal approch and don't try to start with optimal approach and endup doing nothing
+3. after writing while loop just write incrementation condition to avoid infinite loop
+3. recheck whether the pointer is pointing to the array index whether it pointed to the index where  it satisfied the last condition in loop or it the first condition it didn't satisfied

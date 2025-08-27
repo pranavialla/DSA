@@ -9,8 +9,6 @@ public class AllPermutations {
         List<List<Integer>> permutations = new ArrayList<>();
         List<Integer> curProcessingPermutation= getArrayListFromArray(nums);
         return getPermutations(0, curProcessingPermutation, permutations);
-
-
     }
 
     private List<Integer> getArrayListFromArray(int[] nums) {

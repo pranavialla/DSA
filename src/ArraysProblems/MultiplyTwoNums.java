@@ -2,13 +2,11 @@ class MultiplyTwoNums {
     public String multiplyStrings(String s1, String s2) {
         // code here
         /*
-        finalSign = 1
         1. compute final number sign
-            if (s1.charAt(0)=='-')
-                finalSign*=-1
-        2. remove trailing 0 and identify if any number is 0
+        2. remove leading 0's and identify if any number is 0
         3. multiply num
-        4. reverse num
+        4. make num and add sign
+
         */
         int s1_index = 0;
         int s2_index = 0;

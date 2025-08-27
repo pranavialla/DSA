@@ -1,0 +1,20 @@
+1. Have dummy nodes to avoid conditional checks inside loop for num checks
+	you don’t have to handle special cases when adding the first node to each list
+
+	if (val % 2 == 0) {
+	    if (eStart == null) {
+	        eStart = curr;
+	        eEnd = curr;
+	    } else {
+	        eEnd.next = curr;
+	        eEnd = eEnd.next;
+	    }
+	}
+
+	More conditional logic inside the loop.
+
+	Higher chance of bugs due to null pointer exceptions.
+
+	Harder to read and maintain.
+
+2. have 2 pointers cur and previous always. and store cur.next and cur in the temp at the begging of loop to assign it to cur and previous at the end of the loop
