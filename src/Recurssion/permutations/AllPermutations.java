@@ -8,7 +8,8 @@ public class AllPermutations {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> permutations = new ArrayList<>();
         List<Integer> curProcessingPermutation= getArrayListFromArray(nums);
-        return getPermutations(0, curProcessingPermutation, permutations);
+        getPermutations(0, curProcessingPermutation, permutations);
+        return permutations;
     }
 
     private List<Integer> getArrayListFromArray(int[] nums) {
@@ -19,7 +20,7 @@ public class AllPermutations {
         return numsCopy;
     }
 
-    private List<List<Integer>> getPermutations(int startIndex, List<Integer> curProcessingPermutation, List<List<Integer>> permutations) {
+    private void getPermutations(int startIndex, List<Integer> curProcessingPermutation, List<List<Integer>> permutations) {
         if(startIndex==curProcessingPermutation.size()){
             permutations.add(new ArrayList<>(curProcessingPermutation));
         }
@@ -28,7 +29,7 @@ public class AllPermutations {
             getPermutations(startIndex+1, curProcessingPermutation, permutations);
             swap(curProcessingPermutation, i, startIndex);
         }
-        return permutations;
+        return ;
     }
 
     private void swap(List<Integer> curProcessingPermutation, Integer l, Integer r){
