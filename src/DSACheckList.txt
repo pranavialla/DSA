@@ -2,3 +2,6 @@
 2. Always Always Always start will normal approch and don't try to start with optimal approach and endup doing nothing
 3. after writing while loop just write incrementation condition to avoid infinite loop
 3. recheck whether the pointer is pointing to the array index whether it pointed to the index where  it satisfied the last condition in loop or it the first condition it didn't satisfied
+4. obser input format and how we can process that effeciantly by checking all th possible input types (some time input.split("\\s+ ) works but it doesn't work where it is not for ated by space. so there we need to use pointers to read)
+5. concentrate on input range as majority of them can be optimised by considering input range
+6. be mindful on whether you're comparing index with index or value woith value. not cross .

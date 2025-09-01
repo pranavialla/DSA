@@ -1,0 +1,27 @@
+
+In NSE and NGE use nums.length as the case where there is no next greater element
+In PSE and PGE use -1 as the case where there is no next greater element
+these conditions help to subarray min, max, range calculations too and generaally also it makes sense
+
+
+🔹 Previous Elements (PSE / PGE)
+We use >= for previous smaller and <= for previous greater because we want to include equal elements when looking backward.
+
+This ensures stability in the stack: if multiple equal elements appear, we treat the earlier one as the "previous" reference.
+
+It avoids skipping over duplicates that should be part of the subarray count.
+
+🔹 Next Elements (NSE / NGE)
+We use > for next smaller and < for next greater to exclude equal elements when looking forward.
+
+This prevents overcounting subarrays where the same value appears multiple times.
+
+It ensures that each element is only counted once as the "next" boundary.
+
+
+
+if we want to check any condition for all elements in the monolithic stack them if we add one more element in the main array
+ 1. at the begin if it is Previous (greatest| smallest)
+ 2. at the end if it is next (greatest| smallest)
+ 3. add min element in the array if we want smallest
+ 3. add max element in the array max if we wav greates

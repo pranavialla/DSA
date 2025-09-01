@@ -23,30 +23,27 @@ public class TrappingRainWater {
     }
 
     public int trap2(int[] height) {
-        int n = height.length;
-        int left = 0;
-        int right = height.length-1;
+    
+        int cur=0, rightMax = 0, ri= height.length-1, leftMax=0, trappedWater = 0;
 
-        int trappedRainWater = 0;
-        int leftMax = 0;
-        int rightMax = 0;
-        while(left < right){
-            if(height[left] <= height[right]){
-                if(height[left] > leftMax){
-                    leftMax = height[left];
+        while(cur<=ri){ 
+            if(rightMax<=leftMax){
+                if(rightMax< height[ri]){
+                    rightMax = height[ri];
                 }else{
-                    trappedRainWater += leftMax - height[left];
+                    trappedWater =trappedWater +  rightMax - height[ri];
                 }
-                left++;
+                ri--;
             } else{
-                if(height[right] > rightMax){
-                    rightMax = height[right];
-                } else{
-                    trappedRainWater += rightMax - height[right];
+                if(leftMax< height[cur]){
+                    leftMax = height[cur];
+                }else{
+                    trappedWater =trappedWater +  leftMax - height[cur];
                 }
-                right--;
+                cur++;
             }
+        
         }
-        return trappedRainWater;
+        return trappedWater;
     }
 }

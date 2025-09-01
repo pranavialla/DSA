@@ -1,0 +1,106 @@
+
+
+to check whether a string contains any alphabets
+
+c.matches(".*[a-zA-Z].*")
+Character.isLetter(c)
+
+
+to check whether a character is alphabets
+Character.isletter()
+
+is digit
+
+Character.isDigit()
+
+alphamuneric check
+
+(c >= 'A' && c <= 'Z') ||
+                (c >= 'a' && c <= 'z') ||
+                (c >= '0' && c <= '9')
+
+Character.isLetterOrDigit(c)
+
+
+Might be null	String.valueOf()
+Guaranteed non-null & want custom representation	.toString()
+Converting primitives	String.valueOf()
+
+to initialize map 
+ Map<Character, Integer> precedence = Map.of(
+            '^', 3,
+            '*', 2, '/', 2,
+            '+', 1, '-', 1,
+            '(', 0
+        );
+
+
+
+.replaceFirst(...)
+A Java String method that finds the first match of a regular expression (regex) in the string and replaces it with something else (in this case, an empty string "").
+
+3️⃣ "^\\s+"
+This is the regex pattern:
+
+^ → start of the string
+
+\\s → “any whitespace character” (space, tab, newline)
+
++ → one or more of the preceding thing (whitespace)
+
+
+to get the matched string
+s.matches("^[0-9]+")
+
+
+String s = "123abc456def789";
+
+        Pattern p = Pattern.compile("[0-9]+"); // one or more digits
+        Matcher m = p.matcher(s);
+
+        while (m.find()) {
+            System.out.println("Found: " + m.group());
+
+    🔍 How it works
+m.find() → jumps to the next match each time it’s called.
+
+m.group() → returns the exact substring for the current match.
+
+Loop until find() returns false.
+
+String.replace(...) in Java treats the first argument as a literal string, not a regular expression.
+
+If you want to use a regex
+You need replaceAll() or replaceFirst()
+
+replaceAll() → interprets the first argument as a regex, replaces all matches.
+
+replaceFirst() → regex, but only the first match.
+
+replace() → literal match only.
+
+when handling negative numbers and trying to add sigh at the end do't forget to add the sigh when checking any conditions
+
+try not to multiply neagative sign (-1) at the end when that value range can be interger both extemes. as  -2e31 <= n <= 2e31-1 we get wrong answers
+-1 * n overflow for Integer.MIN_VALUE
+
+In Java, Integer.MIN_VALUE is -2147483648.
+
+Multiplying it by -1 overflows because 2147483648 is outside the signed int range.
+
+can't directly convert chat to int
+
+int i = (int) '1' ;// this doesn't give 1. it gives ascii value 49
+
+
+String LetterComb = phone.get(digits.charAt(i) - '0');
+
+ArrayList<String> list = new ArrayList<>(List.of("Apple", "Banana", "Cherry"));
+
+What System.gc() does
+It’s a request to the JVM to run the garbage collector.
+
+It’s not guaranteed to run immediately — the JVM may ignore it.
+
+If it does run, it will try to reclaim memory from objects that are no longer referenced.
+
