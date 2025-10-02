@@ -1,4 +1,4 @@
-package GreedyAlgo;
+
 
 public class TrappingRainWater {
     public int trap1(int[] height) {

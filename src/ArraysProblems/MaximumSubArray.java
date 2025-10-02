@@ -1,4 +1,4 @@
-package ArraysProblems;
+
 
 public class MaximumSubArray {
 

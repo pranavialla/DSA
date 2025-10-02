@@ -1,4 +1,4 @@
-package ArraysProblems;
+
 
 class EquilibriumPoint {
 

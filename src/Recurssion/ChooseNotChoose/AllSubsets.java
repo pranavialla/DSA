@@ -1,4 +1,4 @@
-package Recurssion;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,7 +26,7 @@ public class AllSubsets {
         return subsetsWithDuplicates;
     }
 
-    public List<List<Integer>> subsetsWithDup(int[] nums) {
+    public List<List<Integer>> subsetsWithDup1(int[] nums) {
         List<List<Integer>> result = new ArrayList();
         Arrays.sort(nums);
         List<Integer> cur = new ArrayList();

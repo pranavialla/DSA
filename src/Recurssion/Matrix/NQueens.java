@@ -1,4 +1,4 @@
-package Recurssion;
+package Recurssion.Matrix;
 
 import java.util.ArrayList;
 import java.util.Arrays;

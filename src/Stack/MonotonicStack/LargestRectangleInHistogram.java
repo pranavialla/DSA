@@ -1,3 +1,7 @@
+package Stack.MonotonicStack;
+
+import java.util.Stack;
+
 class LargestRectangleInHistogram {
     public int largestRectangleArea(int[] heights) {
         int[] PSE = new int[heights.length];
@@ -55,7 +59,7 @@ class LargestRectangleInHistogram {
         return maxArea;
     }
 
-    private int largestRectangleArea(int[] heights) {
+    private int largestRectangleArea1(int[] heights) {
         int n = heights.length;
         Stack<Integer> stack = new Stack<>();
         int maxArea = 0;

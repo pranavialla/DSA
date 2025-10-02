@@ -1,3 +1,5 @@
+package LinkedListProblems;
+
 class CloneLinkedListWithRandomPointer {
     
     // Function to clone the linked list
@@ -44,4 +46,5 @@ class CloneLinkedListWithRandomPointer {
         
         return clonedHead;
     }
+}
   

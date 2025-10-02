@@ -1,3 +1,7 @@
+package Stack;
+
+import java.util.Stack;
+
 class Astronoid {
     public int[] asteroidCollision(int[] asteroids) {
         Stack<Integer> stack = new Stack();

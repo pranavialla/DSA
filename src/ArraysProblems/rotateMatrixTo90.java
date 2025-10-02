@@ -1,4 +1,4 @@
-package ArraysProblems;
+
 
 public class rotateMatrixTo90 {
     public void rotate(int[][] image) {

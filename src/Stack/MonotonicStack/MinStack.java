@@ -1,4 +1,4 @@
-package Stack;
+package Stack.MonotonicStack;
 
 public class MinStack {
     Stack head;

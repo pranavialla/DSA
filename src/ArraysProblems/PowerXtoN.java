@@ -1,4 +1,4 @@
-package ArraysProblems;
+
 
 public class PowerXtoN {
     public PowerXtoN(double x, int n){

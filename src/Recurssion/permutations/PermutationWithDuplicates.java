@@ -1,3 +1,10 @@
+package Recurssion.permutations;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+
 //This check works only if the array is sorted and you never swap elements in a way that breaks the sorted order for the remaining part of the list. But since you swap elements during recursion, the later part of the list may no longer be sorted, so curProcessingPermutation.get(i) != curProcessingPermutation.get(i - 1) is not a reliable duplicate check anymore.
 
 class PermutationWithDuplicates {

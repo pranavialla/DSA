@@ -1,3 +1,5 @@
+package Stack;
+
 class TheCelebrity{
     public static int Celebrity(int[][] M){
         if (M.length == 0) {

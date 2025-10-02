@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class LetterCombinations {
     private static final String[] KEYS = {
         "",    "",    "abc", "def", "ghi", "jkl",

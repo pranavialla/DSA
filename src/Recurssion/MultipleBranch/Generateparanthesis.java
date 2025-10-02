@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class GenerateParenthesis {
     public List<String> generateParenthesis(int n) {
         List<String> allCombinations = new ArrayList();

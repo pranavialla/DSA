@@ -1,4 +1,4 @@
-package Recurssion;
+package Recurssion.partition;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,3 +1,5 @@
+package String;
+
 class StringIsRepeatedString {
     public boolean repeatedSubstringPattern(String s) {
         int l = s.length();

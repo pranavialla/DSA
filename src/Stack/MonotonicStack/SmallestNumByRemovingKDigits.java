@@ -1,3 +1,5 @@
+package Stack.MonotonicStack;
+
 import java.util.*;
 class SmallestNumByRemovingKDigits {
     public String removeKdigits(String num, int k) {

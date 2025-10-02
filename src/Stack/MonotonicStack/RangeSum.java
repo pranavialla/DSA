@@ -1,3 +1,7 @@
+package Stack.MonotonicStack;
+
+import java.util.Stack;
+
 class RangeSum {
     public long subArrayRanges(int[] nums) {
         int[] PSE = new int[nums.length];

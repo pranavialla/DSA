@@ -1,3 +1,9 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
+
 class Solution {
     public static String infixToPostfix(String s) {
         // code here
@@ -49,7 +55,7 @@ class Solution {
 
 
     //elegent version
-    public static String infixToPostfix(String expression) {
+    public static String infixToPostfix2(String expression) {
         Deque<Character> stack = new ArrayDeque<>();
         StringBuilder result = new StringBuilder();
 

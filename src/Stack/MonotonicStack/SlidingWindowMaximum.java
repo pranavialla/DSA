@@ -1,3 +1,9 @@
+package Stack.MonotonicStack;
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.PriorityQueue;
+
 class Solution {
     public int[] maxSlidingWindow(int[] nums, int k) {
        PriorityQueue<Integer> pq = new PriorityQueue<>((i1, i2) -> nums[i2]-nums[i1]);
@@ -19,7 +25,7 @@ class Solution {
        
     }
 
-    public int[] maxSlidingWindow(int[] nums, int k) {
+    public int[] maxSlidingWindow1(int[] nums, int k) {
         int n = nums.length;
         int[] output = new int[n - k + 1];
         Deque<Integer> deque = new ArrayDeque<>();
@@ -51,7 +57,7 @@ class Solution {
         return output;
     }
 
-    public int[] maxSlidingWindow(int[] nums, int k) {
+    public int[] maxSlidingWindow2(int[] nums, int k) {
        int n = nums.length;
         int[] dq = new int[n];
         int head = 0, tail = 0;

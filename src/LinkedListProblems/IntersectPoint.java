@@ -1,3 +1,5 @@
+package LinkedListProblems;
+
 class IntersectPoint {
   /*
 

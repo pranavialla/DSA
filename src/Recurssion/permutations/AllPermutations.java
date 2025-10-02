@@ -1,4 +1,4 @@
-package Recurssion;
+package Recurssion.permutations;
 
 import java.util.ArrayList;
 import java.util.Arrays;
