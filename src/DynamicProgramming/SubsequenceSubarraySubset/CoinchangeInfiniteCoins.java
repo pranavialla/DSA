@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming.SubsequenceSubarraySubset;
 
 public class CoinchangeInfiniteCoins {
     public static  long getpossibleways(int denominations[], int value){

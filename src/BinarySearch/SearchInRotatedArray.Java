@@ -2,32 +2,35 @@ package BinarySearch;
 
 class SearchInRotatedArray{
     public int search(int[] arr, int target) {
-        int length = arr.length;
-            int left = 0;
-            int right = length-1;
-            while (left<right) {
-                int mid= left+((right-left)/ 2) ;
-                if( arr[left]<=arr[mid] ){
-                    if(arr[left]<=target && target<=arr[mid]){
-                        right = mid;
-                    }
-                    else{
-                        left = mid+1;
-                    }
-                    
-                }
-                else if(arr[right]>=arr[mid]){
-                    if(arr[right]>=target && target>=arr[mid]){
-                        left = mid;
-                    }
-                    else{
-                        right = mid-1;
-                    }
-                }
-                
-            }
+        int left =0;
+        int right = arr.length-1;
+
+        while(left<=right){
+            int mid = left + (right-left)/2 ;
             
-            return arr[left]==target ? left : -1;
+            //left half is sorted
+            if(arr[mid] == target){
+                return mid;
+            } 
+            else if(arr[left]<=arr[mid]){
+                if(target<arr[mid] && target>=arr[left]){
+                    right = mid-1;
+                }
+                else{
+                    left = mid+1;
+                }
+            }
+            else if(arr[mid]<=arr[right]){
+                if(target>arr[mid] && target<=arr[right]){
+                    left = mid+1;
+                }
+                else{
+                    right = mid-1;
+                }
+            }
+                
+        }
+        return -1;
 
         
     }
@@ -55,5 +58,42 @@ class SearchInRotatedArray{
             else hi=mid-1;
         }
         return -1;
+    }
+
+    public boolean searchWithDuplicates(int[] arr, int target) {
+        int left =0;
+        int right = arr.length-1;
+
+        while(left<=right){
+            int mid = left + (right-left)/2 ;
+            System.out.println("left : "+left + " right : "+right + " mid : "+mid);
+            //left half is sorted
+            if(arr[mid] == target){
+                return true;
+            } 
+             if(arr[left]==arr[mid] && arr[mid]==arr[right]){
+                left++;
+                continue;
+            }
+             if(arr[left]<=arr[mid]){
+                if(target<arr[mid] && target>=arr[left]){
+                    right = mid-1;
+                }
+                else{
+                    left = mid+1;
+                }
+            }
+            else if(arr[mid]<=arr[right]){
+                if(target>arr[mid] && target<=arr[right]){
+                    left = mid+1;
+                }
+                else{
+                    right = mid-1;
+                }
+            }
+            
+                
+        }
+        return false;
     }
 }

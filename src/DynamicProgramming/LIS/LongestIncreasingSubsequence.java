@@ -8,6 +8,52 @@ import java.util.Map;
 
 public class LongestIncreasingSubsequence {
 
+    public int lengthOfLIS2(int[] nums) {
+        int[][]  memo = new int[nums.length+1][nums.length+1];
+        return recur( nums, memo);
+    }
+
+    public int recur(int[] nums, int[][]  memo){
+
+        for(int i=nums.length-1; i>=0; i--){
+            for(int prev = nums.length-1; prev>=-1; prev--){
+                int take = 0;
+                if(prev == -1  || nums[prev]<nums[i]){
+                    take = 1 + memo[i+1][i+1];
+                }
+                int notTake =  memo[i+1][prev+1];
+
+                memo[i][prev+1] = Math.max(take, notTake);
+            }
+        }
+        return memo[0][0];
+    }
+
+    public int lengthOfLIS(int[] nums) {
+
+        int[][]  memo = new int[nums.length+1][nums.length+1];
+        for(int[] ememo : memo ) Arrays.fill(ememo, -1);
+        return recur( 0,  -1,  nums, memo);
+    }
+
+    public int recur(int i, int pre, int[] nums, int[][]  memo){
+
+        if(i==nums.length){
+            return 0;
+        } 
+        if(memo[i][pre+1]!=-1) return memo[i][pre+1];
+    
+        int take = 0;
+        if(pre == -1 || nums[pre]<nums[i]){
+            take = 1 + recur( i+1,  i,  nums, memo);
+        }
+        
+        int notTake = recur( i+1,  pre,  nums, memo);
+
+        memo[i][pre+1] = Math.max(take, notTake);
+        return memo[i][pre+1];
+    }
+
     public int lengthOfLIS(int[] nums) {
         //getRecurLIS(nums.length-1, Integer.MAX_VALUE, nums);
         int ans = getMemoRecurLIS(nums.length-1, nums.length, nums, initializeDP(nums));
