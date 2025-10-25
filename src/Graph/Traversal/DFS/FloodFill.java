@@ -1,4 +1,4 @@
-package Graph.Traversal;
+package Graph.Traversal.DFS;
 
 public class FloodFill {
     public int[][] floodFill(int[][] image, int sr, int sc, int newColor){

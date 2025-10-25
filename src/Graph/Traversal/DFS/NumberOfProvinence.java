@@ -1,4 +1,4 @@
-package Graph.Traversal;
+package Graph.Traversal.DFS;
 
 import java.util.ArrayList;
 

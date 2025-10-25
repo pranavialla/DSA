@@ -4,6 +4,42 @@ import java.util.* ;
 import java.io.*;
 
 public class HouseRoberry {
+
+    public static int tabulation(int[] nums){
+        int n= nums.length;
+        int[] memo = new int[nums.length+2]; 
+        Arrays.fill(memo, -1);
+        memo[0]=0;
+        memo[1]=0;
+        
+        for(int curHouse=0; curHouse<n; curHouse++){
+            int take = nums[curHouse] + memo[curHouse];
+            int notTake = memo[curHouse+1];
+        
+            memo[curHouse+2]= Math.max(take, notTake);
+        }
+        
+        return memo[n-1+2];
+    }
+
+    //recursion + memoization
+
+        public int rob(int[] nums) {
+        int[] memo = new int[nums.length+2]; 
+        Arrays.fill(memo, -1);
+        memo[0]=0;
+        memo[1]=0;
+        return robe(nums.length-1, nums, memo);
+    }
+
+    public int robe(int curHouse, int[] nums, int[] memo){
+        if(memo[curHouse+2]!=-1) return memo[curHouse+2];
+        int take = nums[curHouse] + robe(curHouse-2, nums, memo);
+        int notTake = robe(curHouse-1, nums, memo);
+    
+        return Math.max(take, notTake);
+    }
+
     public static long houseRobber(int[] valueInHouse) {
         if(valueInHouse.length==1){
             return valueInHouse[0];
@@ -43,17 +79,7 @@ public class HouseRoberry {
         return Math.max(pick,notPick);
     }
 
-    public static int tabulation(int[] valueInHouse){
-        int[] dp = new int[valueInHouse.length];
 
-        for(int ind=0; ind<valueInHouse.length; ind++){
-            if(ind==0) dp[0]= valueInHouse[ind];
-            int pick=valueInHouse[ind]+ dp[ind-2];
-            int notPick=dp[ind-1];
-            dp[ind] =  Math.max(pick,notPick);
-        }
-        return dp[valueInHouse.length-1];
-    }
 
 
     public static int spaceOptimisedtabulation(int[] valueInHouse){

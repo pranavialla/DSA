@@ -2,10 +2,42 @@ package Graph.TopologicalSort;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
 
 public class CourseSchedulingOrdering {
+
+   
+    public int[] findOrder1(int numCourses, int[][] prerequisites) {
+        List<List<Integer>> adj = new ArrayList<>();
+        int[] indegree = new int[numCourses];
+        Queue<Integer> queue = new LinkedList<>();
+        int order =0 ;
+        int[] ordering = new int[numCourses];
+
+        for (int i = 0; i < numCourses; i++) adj.add(new ArrayList<>());
+        for (int[] edge : prerequisites) {
+            adj.get(edge[1]).add(edge[0]);
+            indegree[edge[0]]++;
+        }
+
+        for (int i = 0; i < numCourses; i++)
+            if (indegree[i] == 0) queue.offer(i);
+
+        int completed = 0;
+        while (!queue.isEmpty()) {
+            int course = queue.poll();
+            ordering[order++] = course;
+            completed++;
+            for (int next : adj.get(course)) {
+                if (--indegree[next] == 0) queue.offer(next);
+            }
+        }
+
+        return completed == numCourses ? ordering : new int[]{};
+
+    }
 
     public int[] findOrder(int numCourses, int[][] prerequisites) {
         int[] indegree = assignIndegree(numCourses, prerequisites);

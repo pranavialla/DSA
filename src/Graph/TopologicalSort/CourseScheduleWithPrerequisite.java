@@ -2,9 +2,37 @@ package Graph.TopologicalSort;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public class CourseScheduleWithPrerequisite {
+    public boolean canFinishMini(int numCourses, int[][] prerequisites) {
+        List<List<Integer>> adj = new ArrayList<>();
+        int[] indegree = new int[numCourses];
+        Queue<Integer> queue = new LinkedList<>();
+
+        for (int i = 0; i < numCourses; i++) adj.add(new ArrayList<>());
+        for (int[] edge : prerequisites) {
+            adj.get(edge[1]).add(edge[0]);
+            indegree[edge[0]]++;
+        }
+
+        for (int i = 0; i < numCourses; i++)
+            if (indegree[i] == 0) queue.offer(i);
+
+        int completed = 0;
+        while (!queue.isEmpty()) {
+            int course = queue.poll();
+            completed++;
+            for (int next : adj.get(course)) {
+                if (--indegree[next] == 0) queue.offer(next);
+            }
+        }
+
+        return completed == numCourses;
+    }
+
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         ArrayList<ArrayList<Integer>> adj = prepareAdjacencyList(numCourses, prerequisites);
         return !isCyclic(numCourses, adj);
