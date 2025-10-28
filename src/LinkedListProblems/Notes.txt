@@ -17,4 +17,5 @@
 
 	Harder to read and maintain.
 
-2. have 2 pointers cur and previous always. and store cur.next and cur in the temp at the begging of loop to assign it to cur and previous at the end of the loop
+2. have 2 pointers cur and previous always. and store cur.next and cur in the temp at the begging of loop
+ to assign it to cur and previous at the end of the loop

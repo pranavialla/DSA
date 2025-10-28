@@ -22,7 +22,7 @@ start from the end digit
 • Additive Rule: If a smaller or equal numeral comes before  a larger one, you add them.• Example: `VI` = 5 + 1 = 6
 • Example: `XV` = 10 + 5 = 15
 
-• Subtractive Rule: If a smaller numeral comes before a larger one, you subtract it.• Example: `IV` = 5 − 1 = 4
+• Subtractive Rule: If a smaller numeral comes after a larger one, you subtract it.• Example: `IV` = 5 − 1 = 4
 • Example: `IX` = 10 − 1 = 9
 
 • Roman numerals are usually written from largest to smallest, left to right, except when using the subtractive rule.

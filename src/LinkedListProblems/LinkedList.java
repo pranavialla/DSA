@@ -6,8 +6,6 @@ public class LinkedList {
     Node tail;
     static int size;
 
-
-
     public static class Node {
         public int value;
         public Node next;
