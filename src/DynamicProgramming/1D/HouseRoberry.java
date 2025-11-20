@@ -24,7 +24,7 @@ public class HouseRoberry {
 
     //recursion + memoization
 
-        public int rob(int[] nums) {
+    public int rob(int[] nums) {
         int[] memo = new int[nums.length+2]; 
         Arrays.fill(memo, -1);
         memo[0]=0;

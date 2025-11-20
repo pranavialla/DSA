@@ -2,7 +2,7 @@ package GreedyAlgo.JobSequencingProblem;
 
 import java.util.Arrays;
 
-//https://www.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1
+/;
 public class JobSequencingProblem {
 
     public int[] maxProfitSequencing(Job arr[], int n)

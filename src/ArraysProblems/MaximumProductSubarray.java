@@ -1,3 +1,4 @@
+package ArraysProblems;
 
 
 //https://leetcode.com/problems/maximum-product-subarray/

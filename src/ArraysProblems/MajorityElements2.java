@@ -1,4 +1,4 @@
-package GreedyAlgo;
+package ArraysProblems;
 
 import java.util.ArrayList;
 import java.util.List;
